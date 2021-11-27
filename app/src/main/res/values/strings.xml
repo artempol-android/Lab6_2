@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Lab6_2</string>
+    <string name="car">CAR</string>
+    <string name="pic_str">Hello, this picture was downloaded from the internet, so..</string>
+</resources>
