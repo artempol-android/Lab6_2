@@ -14,14 +14,15 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         Log.d("Thread: ", Thread.currentThread().name)
 
         observeBitmap()
-        model.downloadPicture()
+        if (binding.imageView.drawable == null) {
+            model.downloadPicture()
+        }
     }
 
     private fun observeBitmap() {
